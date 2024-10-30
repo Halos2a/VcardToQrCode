@@ -10,7 +10,7 @@ st.set_page_config(page_title="VCARD to QR Code", page_icon=image, layout="cente
 def gen_code(VCARD_str):
     qr_object = qrcode.QRCode(
         version=None,
-        error_correction==qrcode.constants.ERROR_CORRECT_L,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
         box_size=10,
         border=4
     )

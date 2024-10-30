@@ -12,7 +12,7 @@ def gen_code(VCARD_str):
         version=None,
         error_correction==qrcode.constants.ERROR_CORRECT_L,
         box_size=10,
-        border=4,
+        border=4
     )
     qr_object.add_data(VCARD_str)
     qr_object.make(fit=True)

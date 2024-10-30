@@ -1,6 +1,7 @@
 import qrcode
 import streamlit as st
 import io
+import PIL
 
 image = PIL.Image.open("app_icon.jpg")
 

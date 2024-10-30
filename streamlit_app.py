@@ -26,23 +26,25 @@ st.text("Saisir les informations pour générer le QR Code ou coller le code vCa
 VCARD_full = st.text_input("Code vCard")
 st.divider()
 
-lastname = st.text_input("Nom de famille")
-firstname = st.text_input("Prénom")
+with st.form("form",enter_to_submit=False):
 
-tel = st.text_input("Téléphone")
-email = st.text_input("Email")
-
-
-build = f"""BEGIN:VCARD
-VERSION:3.0
-N:{lastname};{firstname}
-FN:{firstname} {lastname}
-TEL;CELL:{tel}
-EMAIL:{email}
-END:VCARD
-"""
-
-submit = st.button("Generer le QR Code")
+    lastname = st.text_input("Nom de famille")
+    firstname = st.text_input("Prénom")
+    
+    tel = st.text_input("Téléphone")
+    email = st.text_input("Email")
+    
+    
+    build = f"""BEGIN:VCARD
+    VERSION:3.0
+    N:{lastname};{firstname}
+    FN:{firstname} {lastname}
+    TEL;CELL:{tel}
+    EMAIL:{email}
+    END:VCARD
+    """
+    
+    submit = st.form_submit_button("Generer le QR Code")
 
 
 if submit and (VCARD_full != "" or build != ""):

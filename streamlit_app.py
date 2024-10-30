@@ -2,6 +2,8 @@ import qrcode
 import streamlit as st
 import io
 
+st.set_page_config(page_title="VCARD to QR Code", page_icon="🪪", layout="centered", initial_sidebar_state="collapsed")
+
 def gen_code(VCARD_str):
     qr_object = qrcode.QRCode(
         version=None,

@@ -68,4 +68,4 @@ if submit and (VCARD_full != "" or build != ""):
 
     
     st.image(img)
-    st.download_button(label="Telecharger QR Code", data=img_byte_arr, file_name=file_name, mime="image/png")
+    st.download_button(label="Telecharger QR Code", data=img_byte_arr, file_name=file_name+".png", mime="image/png")

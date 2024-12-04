@@ -59,5 +59,13 @@ if submit and (VCARD_full != "" or build != ""):
     img.save(img_byte_arr, format='PNG')
     img_byte_arr = img_byte_arr.getvalue()
 
+    file_name = ""
+    
+    if VCARD_full != "":
+        file_name = VCARD_full
+    else:
+        file_name = f"{firstname}_{lastname}"
+
+    
     st.image(img)
     st.download_button(label="Telecharger QR Code", data=img_byte_arr, file_name="qrcode.png", mime="image/png")
